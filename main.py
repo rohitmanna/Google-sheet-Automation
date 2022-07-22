@@ -1,22 +1,3 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-from pip._internal.operations.install.legacy import install
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-
-
 # Loading the Environment
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
@@ -63,11 +44,7 @@ d1 = pd.read_csv(r'C:\Users\manna\Downloads\d2.csv')
 from df2gspread import df2gspread as d2g
 
 ## Code to upload pandas dataframe - Sample below
+
 #d2g.upload(dataframe,"spreadsheet_key","worksheet-NAME",credentials=creds, row_names=True)
 d2g.upload(d1, "1pbMDwgGkHWzD7HPqqgaZnl2ibDFU2jGmEaTQfeUpH6s", "Sup", credentials=creds, row_names=True)
 print(d1)
-#### To check current working Directory
-import pathlib
-pathlib.Path().resolve()
-
-d1.head()
